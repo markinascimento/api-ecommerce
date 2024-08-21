@@ -1,12 +1,16 @@
 import { Router } from "express";
+import { User } from "../entities/User";
 
 export const routers = Router();
 
 routers.get("/", (request, response) => {
-  fetch("https://rickandmortyapi.com/api")
-    .then((res) => res.json())
-    .then((data) => console.log(data))
-    .catch((err) => console.log(err));
+  const user = new User({
+    email: "marcos@gmail.com",
+    name: "marcos",
+    password: "1234",
+  });
 
-  return response.json({ sucess: true });
+  console.log(user);
+
+  return response.json({ user });
 });
