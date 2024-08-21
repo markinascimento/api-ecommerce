@@ -1,0 +1,60 @@
+// -> Auth
+  [] - Realizar login
+  [] - Criar conta
+
+=================== TODAS ESSAS AÇÕES ABAIXO DEVERÁ POSSUIR JWT ===================
+
+// -> Gerenciamento dos produtos
+  [] - Ler
+        - Paginação
+        - Filtro por categoria
+
+  [] - Ler unico
+  
+  [] - Criar
+        - Produtos não podem repetir nomes
+        - Produtos não pode ter quantidade negativa
+        - Não pode ter valores negativos
+
+  [] - Atualizar
+        - Produtos não podem repetir nomes
+        - Produtos não pode ter quantidade negativa
+        - Não pode ter valores negativos
+
+  [] - Deletar
+
+======================================================================================
+
+// -> Gerenciamento de categorias
+  [] - Ler
+  
+  [] - Criar
+        - Produtos não podem repetir nomes
+
+  [] - Atualizar
+        - Produtos não podem repetir nomes
+
+  [] - Deletar
+
+  ======================================================================================
+
+// -> Gerenciamento de usuários
+  [] - Ler
+  
+  [] - Criar
+        - Produtos não podem repetir e-mail
+
+  [] - Atualizar
+        - Produtos não podem repetir e-mail
+
+  [] - Deletar
+        - Ele só poderá apagar sua propria conta
+
+======================================================================================
+
+// -> Gerenciamento de pedido
+  [] - Ler
+  [] - Criar
+  [] - Atualizar
+  [] - Deletar
+  [] - Atualizar status do pedido
