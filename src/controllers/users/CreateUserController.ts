@@ -1,19 +1,9 @@
-import type { Request, Response } from "express";
-import type { CreateUserUseCase } from "../../useCases/users/CreateUserUseCase";
-import { User } from "../../entities/User";
+import { UsersRepository } from "../../repositories/UsersRepository";
+import { CreateUserController } from "../../useCases/users/create-user/create-user-controller";
+import { CreateUserUseCase } from "../../useCases/users/create-user/create-user-use-case";
 
-export class CreateUserController {
-  constructor(private createUserUseCase: CreateUserUseCase) {}
+const usersRepository = new UsersRepository();
+const createUserUseCase = new CreateUserUseCase(usersRepository);
+const createUserController = new CreateUserController(createUserUseCase);
 
-  async handle(request: Request, response: Response) {
-    const body = request.body;
-
-    const user = new User({
-      email: "marcos@gmail.com",
-      name: "marcos",
-      password: "1234",
-    });
-
-    await this.createUserUseCase.execute(user);
-  }
-}
+export { createUserController };
